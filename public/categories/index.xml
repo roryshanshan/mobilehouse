@@ -1,1 +1,47 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Categories on Hugoplate</title><link>https://roryshanshan.github.io/mobilehouse/categories/</link><description>Recent content in Categories on Hugoplate</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 04 Apr 2022 05:00:00 +0000</lastBuildDate><atom:link href="https://roryshanshan.github.io/mobilehouse/categories/index.xml" rel="self" type="application/rss+xml"/><item><title>Application</title><link>https://roryshanshan.github.io/mobilehouse/categories/application/</link><pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate><guid>https://roryshanshan.github.io/mobilehouse/categories/application/</guid><description/></item><item><title>Architecture</title><link>https://roryshanshan.github.io/mobilehouse/categories/architecture/</link><pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate><guid>https://roryshanshan.github.io/mobilehouse/categories/architecture/</guid><description/></item><item><title>Data</title><link>https://roryshanshan.github.io/mobilehouse/categories/data/</link><pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate><guid>https://roryshanshan.github.io/mobilehouse/categories/data/</guid><description/></item><item><title>Software</title><link>https://roryshanshan.github.io/mobilehouse/categories/software/</link><pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate><guid>https://roryshanshan.github.io/mobilehouse/categories/software/</guid><description/></item><item><title>Technology</title><link>https://roryshanshan.github.io/mobilehouse/categories/technology/</link><pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate><guid>https://roryshanshan.github.io/mobilehouse/categories/technology/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Hugoplate</title>
+    <link>http://localhost:1313/mobilehouse/categories/</link>
+    <description>Recent content in Categories on Hugoplate</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 04 Apr 2022 05:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/mobilehouse/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Application</title>
+      <link>http://localhost:1313/mobilehouse/categories/application/</link>
+      <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/mobilehouse/categories/application/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Architecture</title>
+      <link>http://localhost:1313/mobilehouse/categories/architecture/</link>
+      <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/mobilehouse/categories/architecture/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data</title>
+      <link>http://localhost:1313/mobilehouse/categories/data/</link>
+      <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/mobilehouse/categories/data/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software</title>
+      <link>http://localhost:1313/mobilehouse/categories/software/</link>
+      <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/mobilehouse/categories/software/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Technology</title>
+      <link>http://localhost:1313/mobilehouse/categories/technology/</link>
+      <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/mobilehouse/categories/technology/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

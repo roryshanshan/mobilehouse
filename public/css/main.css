@@ -365,6 +365,9 @@
 .max-w-screen {
   max-width: 100vw;
 }
+.min-w-\[150px\] {
+  min-width: 150px;
+}
 .min-w-screen {
   min-width: 100vw;
 }
@@ -1798,6 +1801,20 @@
 .transform-view {
   transform-box: view-box;
 }
+.group-hover\:block {
+  &:is(:where(.group):hover *) {
+    @media (hover: hover) {
+      display: block;
+    }
+  }
+}
+.hover\:opacity-60 {
+  &:hover {
+    @media (hover: hover) {
+      opacity: 60%;
+    }
+  }
+}
 .dark\:opacity-0 {
   @media (prefers-color-scheme: dark) {
     opacity: 0%;
@@ -2089,4 +2106,3 @@
   syntax: "*";
   inherits: false;
 }
-
