@@ -11,14 +11,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'  # 你也可以用 '18' 或 'latest'
+
+      - name: Install TailwindCSS
+        run: |
+          npm install -g tailwindcss
+          npx tailwindcss -i ./assets/css/main.css -o ./assets/css/output.css --minify
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
           extended: true
-
-      - name: Install TailwindCSS
-        run: npm install -g tailwindcss --prefix /usr/local
 
       - name: Build with Hugo
         run: hugo --minify
