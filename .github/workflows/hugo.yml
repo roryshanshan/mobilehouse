@@ -17,7 +17,7 @@ jobs:
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
-          extended: true  # 安装 extended 版本，支持 TailwindCSS
+          extended: true  # 必须是 extended 版本
 
       - name: Install Node.js
         uses: actions/setup-node@v4
@@ -25,10 +25,9 @@ jobs:
           node-version: '20'
 
       - name: Install TailwindCSS
-        run: npm install -g tailwindcss
-
-      - name: Install project dependencies
-        run: npm install
+        run: |
+          npm install -g tailwindcss
+          npm install  # 确保安装 package.json 里的依赖
 
       - name: Build Hugo site
         run: hugo --minify
