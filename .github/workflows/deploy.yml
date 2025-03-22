@@ -1,0 +1,28 @@
+name: Deploy Hugo site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # 触发流程的分支
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo_version: '0.145.0'
+
+    - name: Build the site with Hugo
+      run: hugo --minify
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ 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_}}
+        publish_dir: ./public  # Hugo 编译生成的静态文件目录
