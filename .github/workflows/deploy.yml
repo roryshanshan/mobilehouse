@@ -18,8 +18,11 @@ jobs:
       with:
         node-version: '18'
 
-    - name: Install dependencies (without optional)
-      run: npm install --no-optional  # 安装项目依赖并跳过不可选的依赖
+    - name: Configure npm to ignore optional dependencies
+      run: npm config set optional false
+
+    - name: Install dependencies
+      run: npm install --no-optional --legacy-peer-deps  # 安装依赖并跳过不可选依赖
 
     - name: Install TailwindCSS CLI
       run: npm install tailwindcss
