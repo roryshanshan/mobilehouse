@@ -1,7 +1,7 @@
 ######################## default configuration ####################
 # The base URL of your site (required). This will be prepended to all relative URLs.
 baseURL = "https://roryshanshan.github.io/mobilehouse/"
-publishDir = "public""
+publishDir = "public"
 # Title of your website (required).
 title = "Hugoplate"
 # Your theme name
@@ -161,3 +161,6 @@ lazy = true
 [[params.plugins.js]]
 link = "plugins/youtube-lite.js"
 lazy = true
+
+
+
