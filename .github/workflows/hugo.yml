@@ -14,12 +14,12 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'  # 你也可以用 '18' 或 'latest'
+          node-version: '20'  # 确保使用兼容的 Node.js 版本
 
       - name: Install TailwindCSS
         run: |
-          npm install -g tailwindcss
-          npx tailwindcss -i ./assets/css/main.css -o ./assets/css/output.css --minify
+          npm install -g tailwindcss@3.4.1
+          npx tailwindcss --help  # 确保 TailwindCSS 可以正确运行
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
