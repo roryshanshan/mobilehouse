@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest  # 使用 Ubuntu 系统运行工作流
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
@@ -16,10 +16,12 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '18'  # 升级 Node.js 版本
+        node-version: '18'
 
     - name: Install dependencies
-      run: npm install --no-optional  # 安装依赖并跳过可选包
+      run: |
+        npm install --no-optional  # 安装项目依赖
+        npm install tailwindcss  # 安装 TailwindCSS CLI
 
     - name: Set up Hugo
       uses: peaceiris/actions-hugo@v2
