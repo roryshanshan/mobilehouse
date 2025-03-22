@@ -1,35 +1,26 @@
-name: Deploy Hugo site to GitHub Pages
-
+name: Deploy Hugo Site
 on:
   push:
     branches:
       - main
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
+        uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
-          extended: true  # 必须是 extended 版本
-
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
+          extended: true
 
       - name: Install TailwindCSS
-        run: |
-          npm install -g tailwindcss
-          npm install  # 确保安装 package.json 里的依赖
+        run: npm install -g tailwindcss --prefix /usr/local
 
-      - name: Build Hugo site
+      - name: Build with Hugo
         run: hugo --minify
 
       - name: Deploy to GitHub Pages
