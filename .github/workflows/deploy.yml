@@ -18,10 +18,11 @@ jobs:
       with:
         node-version: '18'
 
-    - name: Install dependencies
-      run: |
-        npm install --no-optional  # 安装项目依赖
-        npm install tailwindcss  # 安装 TailwindCSS CLI
+    - name: Install dependencies (without optional)
+      run: npm install --no-optional  # 安装项目依赖并跳过不可选的依赖
+
+    - name: Install TailwindCSS CLI
+      run: npm install tailwindcss
 
     - name: Set up Hugo
       uses: peaceiris/actions-hugo@v2
