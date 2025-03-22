@@ -18,11 +18,8 @@ jobs:
       with:
         node-version: '18'
 
-    - name: Configure npm to ignore optional dependencies
-      run: npm config set optional false
-
     - name: Install dependencies
-      run: npm install --no-optional --legacy-peer-deps  # 安装依赖并跳过不可选依赖
+      run: npm install --no-optional --legacy-peer-deps
 
     - name: Install TailwindCSS CLI
       run: npm install tailwindcss
@@ -38,5 +35,5 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}  # 使用 GITHUB_TOKEN 进行身份验证
         publish_dir: ./public
