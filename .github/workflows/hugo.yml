@@ -1,0 +1,37 @@
+name: Deploy Hugo site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # 只在 main 分支推送时触发
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🚀 检出代码
+        uses: actions/checkout@v4
+
+      - name: 📥 安装 Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: 📥 安装 Node.js（用于 TailwindCSS）
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: ⚡ 安装 TailwindCSS CLI
+        run: npm install -g tailwindcss
+
+      - name: ⚡ 生成静态页面
+        run: hugo --minify
+
+      - name: 🚀 部署到 GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
